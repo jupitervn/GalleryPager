@@ -23,6 +23,7 @@ package com.cdv.GalleryPager;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.view.Gravity;
@@ -54,7 +55,7 @@ public class PagerActivity extends Activity {
 
         //If hardware acceleration is enabled, you should also remove
         // clipping on the pager for its children.
-        if (mViewPager.isHardwareAccelerated()) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB && mViewPager.isHardwareAccelerated()) {
             mViewPager.setClipChildren(false);
         }
 
