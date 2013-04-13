@@ -87,7 +87,7 @@ public class PagerActivity extends Activity {
 
         @Override
         public int getCount() {
-            return 100;
+            return 150;
         }
 
         @Override
